@@ -48,8 +48,9 @@
         <a class="navbar-brand" href="#">Reddit Venturads.com</a>
         <div class="navbar-collapse collapse navbar-responsive-collapse">
           <ul class="nav navbar-nav">
-            <li><%= link_to "Link1", "/path1"  %></li>
+            
             <li><%= link_to "New Link", new_link_path %></li>
+            <li><%= link_to "Account", edit_user_registration_path  %></li>
             <li>
               <% if user_signed_in? %>
                 <%= link_to "Sign out", destroy_user_session_path, :method => :delete %>
