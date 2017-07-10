@@ -6,6 +6,8 @@
   =require twitter-bootstrap-static/fontawesome
   */
   
+@import url("//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css");
+
 .page-header a{
   color: blue !important;
 }

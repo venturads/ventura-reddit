@@ -1,7 +1,22 @@
 <div class='page-header'>
   <h2><a href="<%= @link.url %>"><%= @link.title %></a></h2><br>
-  <small>Submitted by <%= @link.user_id %></small>
+  <small>Submitted by <%= @link.user.email %></small>
 </div>
+
+       <div class="btn-group" style="float:right;">
+            
+            <%= link_to like_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
+            <span class="glyphicon glyphicon-chevron-up"></span>
+            Upvote
+            <%= @link.get_upvotes.size %>
+            <% end %>
+            <%= link_to dislikes_link_path(@link), method: :put, class: "btn btn-default btn-sm" do %>
+            <span class="glyphicon glyphicon-chevron-down"></span>
+            Downvote
+            <%= @link.get_downvotes.size %>
+            <% end %>
+        </div>
+
 <div class="btn-group">
   <%= link_to t('.back', :default => t("helpers.links.back")),
                 links_path, :class => 'btn btn-default'  %>
