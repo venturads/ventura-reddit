@@ -10,6 +10,7 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
+    
   end
 
   # GET /links/new
@@ -66,7 +67,12 @@ class LinksController < ApplicationController
     def set_link
       @link = Link.find(params[:id])
     end
-
+    
+    def authorized_user
+      @link = current_user.links.find_by(id: params[:id])
+      redirect_to links_path, notice: "Not authorized to edit this link" if@link.nil?
+    end
+    
     # Never trust parameters from the scary internet, only allow the white list through.
     def link_params
       params.require(:link).permit(:title, :url)
