@@ -62,6 +62,8 @@ GEM
     devise-bootstrap-views (0.0.11)
     erubis (2.7.0)
     execjs (2.7.0)
+    font-awesome-rails (4.7.0.2)
+      railties (>= 3.2, < 5.2)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
     i18n (0.8.0)
@@ -136,6 +138,9 @@ GEM
     sdoc (0.4.2)
       json (~> 1.7, >= 1.7.7)
       rdoc (~> 4.0)
+    simple_form (3.5.0)
+      actionpack (> 4, < 5.2)
+      activemodel (> 4, < 5.2)
     spring (2.0.1)
       activesupport (>= 4.2)
     sprockets (3.7.1)
@@ -178,12 +183,14 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   devise
   devise-bootstrap-views
+  font-awesome-rails
   jbuilder (~> 2.0)
   jquery-rails
   pg
   rails (= 4.2.5)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
+  simple_form
   spring
   sqlite3
   turbolinks

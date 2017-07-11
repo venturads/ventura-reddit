@@ -1,0 +1,15 @@
+
+<%= div_for(comment) do %>
+    <div class="comments_wrapper clearfix">
+        <div><small>by: <%= comment.user.email %> | <%= time_ago_in_words(comment.created_at) %> </small></div>
+        <div class="pull-left">
+            <small><strong><%= comment.body %>
+            ago, </strong></small>
+             
+            <% if comment.user == current_user %>
+                <%= link_to '', comment, method: :delete, data: {confirm: 'Are you sure?'},
+                class: "fa fa-trash" %></p>
+            <% end %>
+        </div>
+    </div>
+<% end %>

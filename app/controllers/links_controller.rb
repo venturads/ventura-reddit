@@ -10,7 +10,7 @@ class LinksController < ApplicationController
   # GET /links/1
   # GET /links/1.json
   def show
-    
+   
   end
 
   # GET /links/new

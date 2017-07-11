@@ -31,3 +31,20 @@
   <% end %>
 
 </div>
+<br>
+<h5 class="comments_title">
+  <%= @link.comments.count %> Comments
+</h3>
+<p><%= render :partial => @link.comments %></p>
+
+<% if user_signed_in? %>  
+  <%= simple_form_for [@link, Comment.new] do |f| %>
+    <div class="field">
+      <%= f.text_area :body, class: "form-control" %>
+    </div>
+    <br>
+    <%= f.submit "Add comment", class: "btn btn-primary" %>
+  <% end %>
+<% else %>
+  <%= link_to 'Sign in', new_user_session_path %>
+<% end %>
