@@ -14,3 +14,10 @@
 h3 a {
   color: blue !important;
 }
+.btn{
+  outline: 1px gray;
+  border-radius: 0;
+}
+.navbar-toggle{
+  border-radius: 0;
+}
